@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\AgendaWpf\\AgendaWpf\\AgendaWpf.csproj": {}
+    "C:\\Users\\magas\\agendawpf\\AgendaWpf\\AgendaWpf.csproj": {}
   },
   "projects": {
-    "D:\\C#\\AgendaWpf\\AgendaWpf\\AgendaWpf.csproj": {
+    "C:\\Users\\magas\\agendawpf\\AgendaWpf\\AgendaWpf.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\AgendaWpf\\AgendaWpf\\AgendaWpf.csproj",
+        "projectUniqueName": "C:\\Users\\magas\\agendawpf\\AgendaWpf\\AgendaWpf.csproj",
         "projectName": "AgendaWpf",
-        "projectPath": "D:\\C#\\AgendaWpf\\AgendaWpf\\AgendaWpf.csproj",
+        "projectPath": "C:\\Users\\magas\\agendawpf\\AgendaWpf\\AgendaWpf.csproj",
         "packagesPath": "C:\\Users\\magas\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\AgendaWpf\\AgendaWpf\\obj\\",
+        "outputPath": "C:\\Users\\magas\\agendawpf\\AgendaWpf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\magas\\AppData\\Roaming\\NuGet\\NuGet.Config",

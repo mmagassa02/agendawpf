@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HVgUC7T5E1d34M6fcDO8OALEv8WO3958kOM3lTgNTrEaN3MtHNXqvyqx8HQmyJBWB8NOdwsNBWFvUJ08NF2D8w==",
+  "dgSpecHash": "j9dS3gVKl+FkNlO7wVSJ+l3YZhMScJHs6eqwamvZoh/1w7KkGATn8TesHjXwzCazNFCIPF7OM/+Ie87uFtUU3w==",
   "success": true,
-  "projectFilePath": "D:\\C#\\AgendaWpf\\AgendaWpf\\AgendaWpf.csproj",
+  "projectFilePath": "C:\\Users\\magas\\agendawpf\\AgendaWpf\\AgendaWpf.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\magas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\magas\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

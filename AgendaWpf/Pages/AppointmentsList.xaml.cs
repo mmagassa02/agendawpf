@@ -54,8 +54,7 @@ namespace AgendaWpf.Pages
                     MessageBox.Show("Appointment deleted");
                     this.NavigationService.Refresh();
                 }
-                else
-                {
+                else{
                     MessageBox.Show("No appointment to delete");
                 }
             }

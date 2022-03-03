@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\C#\AgendaWpf\AgendaWpf\obj\Debug\net6.0-windows\
+C:\Users\magas\agendawpf\AgendaWpf\obj\Debug\net6.0-windows\
 AgendaWpf
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-D:\C#\AgendaWpf\AgendaWpf\App.xaml
+C:\Users\magas\agendawpf\AgendaWpf\App.xaml
 7162749825
 
 18705249546
 214-2041708420
 MainWindow.xaml;Pages\AddAppointment.xaml;Pages\AddBroker.xaml;Pages\AddCustomer.xaml;Pages\AppointmentsList.xaml;Pages\BrokersList.xaml;Pages\CustomersList.xaml;
 
-True
+False
 
