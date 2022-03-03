@@ -1,0 +1,68 @@
+﻿<Page x:Class="AgendaWpf.Pages.AppointmentsList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AppointmentsList"
+      Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Appointments list" FontSize="25" FontWeight="Bold" TextAlignment="center"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Grid.Column="0" Name="appointmentlist" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path= DateHour, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Subject" Binding="{Binding Path= Subject, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Customer" Binding="{Binding Path= IdCustomerNavigation.Lastname, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Broker" Binding="{Binding Path= IdBrokerNavigation.Lastname, Mode=TwoWay}"/>
+
+                    <DataGridTemplateColumn Header="Edit">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" Click="DisplayEditForm"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Click="DeleteAppointment"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Column="1" Name="EditAppointmentForm" Visibility="Collapsed">
+                <Label Target="{Binding ElementName=appointmentId}" Content="IdAppointment" Visibility="Hidden"></Label>
+                <TextBox Name="appointmentId" Width="200" Visibility="Hidden"></TextBox>
+                <Label Target="{Binding ElementName= day}">Date</Label>
+                <DatePicker Width="200" Name="day">
+                </DatePicker>
+                <TextBox Name="Hour" Width="200"></TextBox>
+                <TextBox Name="Minutes" Width="200" Margin="0 5 0 0"></TextBox>
+                <Label Target="{Binding ElementName=appointmentSubject}">Subject</Label>
+                <TextBox Width="200" Name="appointmentSubject" Height="32"></TextBox>
+                <Label Target="{Binding ElementName=appointmentCustomer}">Customer</Label>
+                <ComboBox Width="200" Name="appointmentCustomer"  SelectedValuePath="IdCustomer"></ComboBox>
+                <Label Target="{Binding ElementName=appointmentBroker}">Broker</Label>
+                <ComboBox Width="200" Name="appointmentBroker"  SelectedValuePath="IdBroker"></ComboBox>
+                <Button Content="Save" Width="200" Margin="0 20 0 0" Click="EditAppointment"></Button>
+                <Button Content="Cancel" Width="200" Margin="0 5 0 0"></Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

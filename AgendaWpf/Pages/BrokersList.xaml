@@ -1,0 +1,65 @@
+﻿<Page x:Class="AgendaWpf.Pages.BrokersList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BrokersList"
+      Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Brokers list" FontSize="25" FontWeight="Bold" TextAlignment="center"></TextBlock>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Grid.Column="0" Name="brokerslist" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="FirstName" Binding="{Binding Path= Firstname}"/>
+                    <DataGridTextColumn Header="LastName" Binding="{Binding Path= Lastname}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Path= Mail}"/>
+                    <DataGridTextColumn Header="Phone" Binding="{Binding Path= PhoneNumber}"/>
+                    <DataGridTemplateColumn Header="Edit">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" Click="DisplayEdit"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Click="DeleteBroker"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Column="1" Name="EditMenu" Visibility="Collapsed">
+                <Label Target="{Binding ElementName=brokerId}" Content="IdBroker" Visibility="Hidden"></Label>
+                <TextBox Name="brokerId" Width="200" Visibility="Hidden"></TextBox>
+                <Label Target="{Binding ElementName=brokerFirstname}" Content="Firstname"></Label>
+                <TextBox Name="brokerFirstname" Width="200"></TextBox>
+                <Label Target="{Binding ElementName=brokerLastname}" Content="Lastname"></Label>
+                <TextBox Name="brokerLastname" Width="200"></TextBox>
+                <Label Target="{Binding ElementName=brokerEmail}" Content="Email"></Label>
+                <TextBox Name="brokerEmail" Width="200"></TextBox>
+                <Label Target="{Binding ElementName=brokerPhone}" Content="Phone"></Label>
+                <TextBox Name="brokerPhone" Width="200"></TextBox>
+                <Button Content="Edit" Width="200" Margin="0 5 0 0" Click="EditBroker"></Button>
+                <Button Content="Cancel" Width="200" Margin="0 5 0 0"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>

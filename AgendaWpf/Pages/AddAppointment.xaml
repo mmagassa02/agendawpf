@@ -1,0 +1,40 @@
+﻿<Page x:Class="AgendaWpf.Pages.AddAppointment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddAppointment"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="631*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextAlignment="Left" Margin="10,0,10,0" FontWeight="Bold" FontSize="15" VerticalAlignment="Center" Grid.ColumnSpan="2">New Appointment</TextBlock>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Name="appointmentform" Visibility="Hidden">
+            <Label Target="{Binding ElementName=appointmentDate}" Margin="200 0 0 0" Content="Date" ></Label>
+            <DatePicker Margin="200 0 200 0" Name="day">
+            </DatePicker>
+            <TextBox Name="Hour" Margin="200 0 200 0"></TextBox>
+            <TextBox Name="Minutes" Margin="200 0 200 0"></TextBox>
+            <Label Target="{Binding ElementName=appointmentSubject}" Margin="200 0 0 0" Content="Subject"></Label>
+            <TextBox Margin="200 0 200 0" Name="appointmentSubject" Height="32"></TextBox>
+
+            <Label Target="{Binding ElementName=appointmentCustomer}" Margin="200 0 0 0" Content="Customer"></Label>
+            <ComboBox Margin="200 0 200 0" Name="appointmentCustomer" SelectedValue="{Binding Customer}" SelectedValuePath="IdCustomer"></ComboBox>
+            <Label Target="{Binding ElementName=appointmentBroker}" Margin="200 0 0 0" Content="Broker"></Label>
+            <ComboBox Margin="200 0 200 0" Name="appointmentBroker" SelectedValue="{Binding Broker}" SelectedValuePath="IdBroker"></ComboBox>
+            <Button Content="Add" Margin="200 20 200 0" Click="AddAppointmnent"></Button>
+            <Button Content="Cancel" Margin="200 20 200 0"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

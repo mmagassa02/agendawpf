@@ -1,0 +1,32 @@
+﻿<Page x:Class="AgendaWpf.Pages.AddBroker"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWpf.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Add Broker"
+      Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" TextAlignment="Left" Margin="10" FontWeight="Bold" FontSize="15" VerticalAlignment="Center">New Broker</TextBlock>
+        <StackPanel Grid.Row="1">
+            <Label Target="{Binding ElementName=brokerFirstname}" Margin="200 0 0 0" Content="Firstname"></Label>
+            <TextBox Margin="200 0 200 0" Name="brokerFirstname"></TextBox>
+            <Label Target="{Binding ElementName=brokerLastname}" Margin="200 0 0 0" Content="Lastname"></Label>
+            <TextBox Margin="200 0 200 0" Name="brokerLastname"></TextBox>
+            <Label Target="{Binding ElementName=brokerEmail}" Margin="200 0 0 0" Content="Email"></Label>
+            <TextBox Margin="200 0 200 0" Name="brokerEmail"></TextBox>
+            <Label Target="{Binding ElementName=brokerPhone}" Margin="200 0 0 0" Content="Phone"></Label>
+            <TextBox Margin="200 0 200 0" Name="brokerPhone"></TextBox>
+            <Button Content="Add" Margin="200 20 200 0" Click="AddNewBroker"></Button>
+            <Button Content="Cancel" Margin="200 20 200 0" Click="CancelAddNewBroker"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
